@@ -1,0 +1,9 @@
+System operacyjny: Windows 10 / Windows 11 / Kubuntu 26.04
+
+Środowiska programistyczne:
+    - Visual Studio Code
+    - Visual Studio 2022
+
+Języki programowania:
+    - C#
+    - JavaScript
