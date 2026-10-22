@@ -4,12 +4,27 @@ char[] others = { 'ą', 'ę', 'ł', 'ń', 'ó', 'ś', 'ż', 'ź', 'Ą', 'Ę', '�
 char[] specials = { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+' };
 char[] digits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
+Console.WriteLine("=========================");
+Console.WriteLine("Generowanie 5 haseł:");
+Console.WriteLine("=========================\n");
+
 for (int i = 0; i < 5; ++i)
 {
-    Console.WriteLine(GeneratePassword());
+    Console.WriteLine($"Hasło {i + 1}: {GeneratePassword()}");
 }
 
+Console.WriteLine();
+Console.WriteLine("=========================");
 
+/** *****************************************
+ * nazwa funkcji: GeneratePassword
+ * opis funkcji:  funkcja generuje losowe 12-znakowe hasło
+ *                skłądające się z 3 dużych, 3 małych i 2 polskich liter
+ *                oraz 2 cyfr i 2 znaków specjalnych
+ * parametry:     brak - nie przyjmuje
+ * zwracany typ i opis:  String - wygenerowane 12-znakowe hasło
+ * autor:         00000000000
+ ***************************************** **/
 String GeneratePassword()
 {
     String password = "";
@@ -40,7 +55,7 @@ String GeneratePassword()
     // 2 specials
     for (int i = 0; i < 2; ++i)
     {
-        char randomSpecial= specials[rnd.Next(specials.Length)];
+        char randomSpecial = specials[rnd.Next(specials.Length)];
         password = PlaceCharInRandomPossition(password, randomSpecial);
     }
 
