@@ -85,13 +85,13 @@ function App() {
 
       </form>
 
-      <p className="p-2 text-primary">Adres: {zapisane.shouldBeShowed ? zapisane.adres : ""}</p>
-      <p className="p-2">Login: {zapisane.shouldBeShowed ? zapisane.login : ""}</p>
+      <p className="p-2 text-primary lead">Adres: {zapisane.shouldBeShowed ? zapisane.adres : ""}</p>
+      <p className="p-2 lead">Login: {zapisane.shouldBeShowed ? zapisane.login : ""}</p>
       {
-        zapisane.wygenerowane && <p className="p-2">Hasło automatycznie generowane</p>
+        zapisane.wygenerowane && <p className="p-2 lead">Hasło automatycznie generowane</p>
       }
       {
-        !zapisane.wygenerowane && <p className="p-2">Hasło: {zapisane.shouldBeShowed ? zapisane.haslo : ""}</p>
+        !zapisane.wygenerowane && <p className="p-2 lead">Hasło: {zapisane.shouldBeShowed ? zapisane.haslo : ""}</p>
       }
 
     </div>
