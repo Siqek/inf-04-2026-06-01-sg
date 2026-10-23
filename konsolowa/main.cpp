@@ -1,4 +1,5 @@
 #include <array>
+#include <clocale>
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -55,6 +56,9 @@ std::string GeneratePassword()
 
 int main()
 {
+    std::setlocale(LC_ALL, "");
+    std::locale::global(std::locale(""));
+
     std::srand(std::time(nullptr));
 
     std::cout << "=========================\n";
